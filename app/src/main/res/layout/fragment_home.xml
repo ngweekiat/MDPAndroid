@@ -10,14 +10,15 @@
         android:id="@+id/scanButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#00A62424"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/purple_500"
         android:paddingHorizontal="34dp"
         android:paddingVertical="14dp"
-        android:text="Scan"
-        android:textColor="#000000"
+        android:text="@string/scanBtn"
+        android:textColor="#FFFFFF"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/bluetoothSwitch"
-        app:layout_constraintTop_toBottomOf="@+id/bluetoothSwitch" />
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/pairedDevicesListView" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -30,81 +31,73 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:text="Devices Found"
         android:textColor="@color/black"
         android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/pairedDevicesListView"
         app:layout_constraintTop_toBottomOf="@+id/pairedDevicesListView" />
 
     <ListView
         android:id="@+id/otherDevicesListView"
         android:layout_width="0dp"
         android:layout_height="285dp"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="24dp"
         android:layout_marginBottom="10dp"
-        android:background="#DC3636"
-        android:listSelector="#B83939"
+        android:background="@drawable/chatlog"
+        android:listSelector="@color/dark_grey"
         android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/connectBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/pairedDevicesListView"
+        app:layout_constraintStart_toStartOf="@+id/pairedDevicesListView"
         app:layout_constraintTop_toBottomOf="@+id/textView5"></ListView>
 
     <Button
         android:id="@+id/connectBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="24dp"
-        android:backgroundTint="#A62424"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/purple_500"
         android:paddingHorizontal="34dp"
         android:paddingVertical="14dp"
-        android:text="Connect"
+        android:text="@string/connectBtn"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/pairedDevicesListView"
         app:layout_constraintTop_toBottomOf="@+id/otherDevicesListView" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:text="Paired Devices"
         android:textColor="@color/black"
         android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/pairedDevicesListView"
         app:layout_constraintTop_toBottomOf="@+id/bluetooth_status" />
 
     <ListView
         android:id="@+id/pairedDevicesListView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="160dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:background="#DC3636"
-        android:listSelector="#B83939"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/chatlog"
+        android:listSelector="@color/dark_grey"
         android:padding="10dp"
         android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintWidth_percent="0.9" />
 
     <TextView
         android:id="@+id/SC2079"
         android:layout_width="324dp"
         android:layout_height="23dp"
-        android:layout_marginStart="60dp"
         android:text="SC2079 - Multi Disciplinary Project"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/pairedDevicesListView"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -113,51 +106,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="31dp"
         android:text="Autismobile"
         android:textSize="60sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/SC2079"
+        app:layout_constraintBottom_toTopOf="@+id/bluetooth_static"
+        app:layout_constraintStart_toStartOf="@+id/pairedDevicesListView"
         app:layout_constraintTop_toTopOf="@+id/SC2079" />
 
     <TextView
         android:id="@+id/bluetooth_static"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="Bluetooth Status"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.099"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Autismobile"
-        app:layout_constraintVertical_bias="0.028" />
+        app:layout_constraintBottom_toTopOf="@+id/bluetooth_status"
+        app:layout_constraintStart_toStartOf="@+id/pairedDevicesListView" />
 
     <TextView
         android:id="@+id/bluetooth_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Connected"
         android:textColor="#82D8B3"
         android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bluetooth_static"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="@+id/pairedDevicesListView"
+        app:layout_constraintTop_toBottomOf="@+id/bluetooth_static" />
 
     <Switch
         android:id="@+id/bluetoothSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="556dp"
+        android:layout_width="93dp"
+        android:layout_height="50dp"
         android:buttonTint="#404252"
         android:text="On"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:thumbTint="#404252"
-        app:layout_constraintBottom_toBottomOf="@+id/bluetooth_static"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/bluetooth_static" />
+        app:layout_constraintBottom_toTopOf="@+id/scanButton"
+        app:layout_constraintEnd_toEndOf="@+id/scanButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

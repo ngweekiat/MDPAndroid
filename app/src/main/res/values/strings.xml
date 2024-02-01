@@ -6,6 +6,9 @@
     <string name="course">SC2079 - Multi-Disciplinary Project</string>
     <string name="autismobile">Autismobile</string>
     <string name="msgPlaceholder">Enter Message Here</string>
+    <string name="scanBtn">SCAN</string>
     <string name="sendBtn">SEND</string>
+    <string name="connectBtn">CONNECT</string>
+
 
 </resources>
