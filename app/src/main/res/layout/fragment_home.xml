@@ -6,6 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+    <Button
+        android:id="@+id/scanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00A62424"
+        android:paddingHorizontal="34dp"
+        android:paddingVertical="14dp"
+        android:text="Scan"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/bluetoothSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/bluetoothSwitch" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="877dp" />
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
@@ -54,11 +74,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:text="Paired Devices"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bluetoothSwitch" />
+        app:layout_constraintTop_toBottomOf="@+id/bluetooth_status" />
 
     <ListView
         android:id="@+id/pairedDevicesListView"
@@ -105,9 +126,10 @@
         android:text="Bluetooth Status"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Autismobile"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintVertical_bias="0.028" />
 
     <TextView
         android:id="@+id/bluetooth_status"
@@ -118,6 +140,7 @@
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bluetooth_static"
         app:layout_constraintVertical_bias="0.0" />
@@ -126,15 +149,15 @@
         android:id="@+id/bluetoothSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="556dp"
         android:buttonTint="#404252"
         android:text="On"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:thumbTint="#404252"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toBottomOf="@+id/bluetooth_static"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bluetooth_status" />
+        app:layout_constraintTop_toTopOf="@+id/bluetooth_static" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
