@@ -3,4 +3,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="course">SC2079 - Multi-Disciplinary Project</string>
+    <string name="autismobile">Autismobile</string>
+    <string name="msgPlaceholder">Enter Message Here</string>
+    <string name="sendBtn">SEND</string>
+
 </resources>

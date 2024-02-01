@@ -7,16 +7,60 @@
     tools:context=".ui.notifications.NotificationsFragment">
 
     <TextView
-        android:id="@+id/text_notifications"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:id="@+id/SC2079"
+        android:layout_width="324dp"
+        android:layout_height="23dp"
+        android:text="@string/course"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Autismobile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Autismobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/autismobile"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textNotifications"
+        app:layout_constraintTop_toTopOf="@+id/SC2079" />
+
+    <TextView
+        android:id="@+id/textNotifications"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/chatlog"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/Autismobile"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="@string/msgPlaceholder"
+        app:layout_constraintEnd_toEndOf="@+id/textNotifications"
+        app:layout_constraintStart_toStartOf="@+id/textNotifications"
+        app:layout_constraintTop_toBottomOf="@+id/textNotifications"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/sendBtn"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
