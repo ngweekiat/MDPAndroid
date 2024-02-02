@@ -95,7 +95,7 @@
         android:id="@+id/SC2079"
         android:layout_width="324dp"
         android:layout_height="23dp"
-        android:text="SC2079 - Multi Disciplinary Project"
+        android:text="@string/course"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/pairedDevicesListView"
         app:layout_constraintTop_toTopOf="parent"
@@ -107,7 +107,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="31dp"
-        android:text="Autismobile"
+        android:text="@string/autismobile"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/bluetooth_static"
@@ -131,6 +131,7 @@
         android:text="Connected"
         android:textColor="#82D8B3"
         android:textSize="48sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/pairedDevicesListView"
         app:layout_constraintTop_toBottomOf="@+id/bluetooth_static" />
 
