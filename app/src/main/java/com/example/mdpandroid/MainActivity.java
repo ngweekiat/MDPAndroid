@@ -1,6 +1,8 @@
 package com.example.mdpandroid;
 
 import android.os.Bundle;
+import android.content.Intent;
+
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -32,6 +34,24 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+        // Set up a listener for navigation_home
+        navView.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.navigation_home) {
+                openBluetoothView();
+                return true;
+            }
+            return NavigationUI.onNavDestinationSelected(item, navController);
+        });
     }
 
+    public void openBluetoothView() {
+        Intent intent = new Intent(this, Bluetooth.class);
+        startActivity(intent);
+    }
+
+    public void openCommsView() {
+        Intent intent = new Intent(this, Communication.class);
+        startActivity(intent);
+    }
 }
